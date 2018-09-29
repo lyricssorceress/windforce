@@ -6,10 +6,7 @@
 %%% @end
 %%% Created : 28. Sep 2018 15:32
 %%%-------------------------------------------------------------------
--module(windforce_application).
 -author("lc").
-
--define(CHILD(I, Type), {I, {I, start_link, []}, permanent, 5000, Type, [I]}).
 
 -define(GET_APP_ENV(Key, Default_Value), application:get_env(application:get_application(), Key, Default_Value)).
 
