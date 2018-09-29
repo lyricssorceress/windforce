@@ -15,7 +15,7 @@
 -define(SUP_FLAGS_SIMPLE_ONE_FOR_ONE, #{strategy => simple_one_for_one, intensity => ?MAX_INTENSITY, period => ?MAX_PERIOD}).
 
 -define(CHILD_WORKER(Module, Args), #{id => Module,
-                                      start =>{Module, start_link, Args},
+                                      start =>{Module, start_link, Args}, %% [Arg1, Arg2] 会调用start_link(Args1, Args2)
                                       restart => transient,
                                       shutdown => 2000,
                                       type => worker,
