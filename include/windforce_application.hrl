@@ -27,12 +27,12 @@
                                       type => worker,
                                       modules => [Module]}).
 
--define(CHILD_SPEC_SUPERVISOR(Module, Args), #{id => Module,
-                                          start =>{Module, start_link, Args},
-                                          restart => transient,
-                                          shutdown => infinity,
-                                          type => supervisor,
-                                          modules => [Module]}).
+-define(CHILD_SPEC_SUPERVISOR(Module, Sup_Name, Args), #{id => Sup_Name,
+                                                          start =>{Module, start_link, [Sup_Name |Args]},
+                                                          restart => transient,
+                                                          shutdown => infinity,
+                                                          type => supervisor,
+                                                          modules => [Module]}).
 
 -define(START_SUPERVISOR, "").
 
