@@ -32,4 +32,4 @@ any_to_list(_) ->
 
 
 process_name(Namespace, Name) ->
-  list_to_atom(any_to_list(Namespace) ++ "_" + integer_to_list(phash2(Name))).
+  list_to_atom(any_to_list(Namespace) ++ "_" + integer_to_list(erlang:phash2(Name))).
