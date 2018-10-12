@@ -40,4 +40,7 @@
 
 -define(MAX_PERIOD, 3600).
 
+-define(PROCESS_NAME(NameSpace, Name), list_to_atom(mara_utils:any_to_list(Namespace) ++ "_" + integer_to_list(phash2(Name)))).
+
+
 

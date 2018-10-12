@@ -29,3 +29,7 @@ any_to_list(Number) when is_float(Number) ->
   float_to_list(Number);
 any_to_list(_) ->
   throw(badarg).
+
+
+process_name(Namespace, Name) ->
+  list_to_atom(any_to_list(Namespace) ++ "_" + integer_to_list(phash2(Name))).
