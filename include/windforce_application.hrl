@@ -40,7 +40,7 @@
 
 -define(MAX_PERIOD, 3600).
 
--define(PROCESS_NAME(NameSpace, Name), list_to_atom(mara_utils:any_to_list(NameSpace) ++ "_" + integer_to_list(erlang:phash2(Name)))).
+-define(PROCESS_NAME(NameSpace, Name), list_to_atom(mara_utils:any_to_list(NameSpace) ++ "_" ++ integer_to_list(erlang:phash2(Name)))).
 
 
 
