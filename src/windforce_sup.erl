@@ -69,7 +69,7 @@ init([]) ->
   AChild = {'AName', {'AModule', start_link, []},
     Restart, Shutdown, Type, ['AModule']},
 
-  {ok, {SupFlags, [AChild]}}.
+  {ok, {SupFlags, []}}.
 
 %%%===================================================================
 %%% Internal functions
