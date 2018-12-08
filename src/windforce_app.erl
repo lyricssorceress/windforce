@@ -10,7 +10,7 @@
 -author("lc").
 
 %% API
--export([test/0]).
+-export([start/0]).
 
-test() ->
-  hi.
+start() ->
+  ok.
