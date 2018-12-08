@@ -58,3 +58,4 @@ trade_hub/settles/*
 zerg_web/node_modules/
 .idea/
 *.iml
+/_build/
