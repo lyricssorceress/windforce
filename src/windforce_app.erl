@@ -13,4 +13,4 @@
 -export([start/0]).
 
 start() ->
-  ok.
+  windforce_sup:start_link().
