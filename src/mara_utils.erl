@@ -12,6 +12,7 @@
 %% API
 -export([any_to_list/1]).
 
+-spec(atom_to_list(Args :: undefined | List | binary | atom() | number() | term() ) -> list()).
 any_to_list(undefined) ->
   "";
 any_to_list(List) when is_list(List) ->
@@ -29,3 +30,4 @@ any_to_list(Number) when is_float(Number) ->
   float_to_list(Number);
 any_to_list(_) ->
   throw(badarg).
+
