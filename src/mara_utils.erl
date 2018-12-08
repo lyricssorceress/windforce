@@ -12,7 +12,7 @@
 %% API
 -export([any_to_list/1]).
 
--spec(atom_to_list(Args :: undefined | List | binary | atom() | number() | term() ) -> list()).
+-spec(any_to_list(Args :: undefined | list() | binary | atom() | number() | term() ) -> list()).
 any_to_list(undefined) ->
   "";
 any_to_list(List) when is_list(List) ->
